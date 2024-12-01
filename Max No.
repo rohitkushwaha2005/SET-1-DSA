@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int numbers[5]; // Array to store 5 integers
+    int maxNumber;  // Variable to store the maximum number
+
+    cout << "Enter 5 integers:" << endl;
+
+    // Input 5 integers from the user
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> numbers[i];
+    }
+
+    // Initialize maxNumber to the first element of the array
+    maxNumber = numbers[0];
+
+    // Find the maximum number
+    for (int i = 1; i < 5; i++)
+    {
+        if (numbers[i] > maxNumber)
+        {
+            maxNumber = numbers[i];
+        }
+    }
+
+    // Output the maximum number
+    cout << "The maximum number is: " << maxNumber << endl;
+
+    return 0;
+}
