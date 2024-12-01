@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+void printParallelogram(int rows, int cols)
+{
+    // Loop through each row
+    for (int i = 0; i < rows; i++)
+    {
+        // Print spaces for indentation
+        for (int j = 0; j < rows - i - 1; j++)
+        {
+            printf(" ");
+        }
+
+        // Print stars in each row
+        for (int k = 0; k < cols; k++)
+        {
+            printf("*");
+        }
+
+        // Move to the next line after printing a row
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int rows, cols;
+
+    // Input the number of rows and columns
+    printf("Enter the number of rows: ");
+    scanf("%d", &rows);
+
+    printf("Enter the number of columns: ");
+    scanf("%d", &cols);
+
+    // Call the function to print the parallelogram
+    printParallelogram(rows, cols);
+
+    return 0;
+}
