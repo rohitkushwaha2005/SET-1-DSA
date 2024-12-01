@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5]; // Array to store 5 integers
+
+    // Input 5 integers from the user
+    cout << "Enter 5 integers:" << endl;
+    for (int i = 0; i < 5; i++)
+    {
+        cin >> arr[i];
+    }
+
+    bool isPalindrome = true; // Assume the array is a palindrome
+
+    // Check if the array is a palindrome
+    for (int i = 0, j = 4; i < j; i++, j--)
+    {
+        if (arr[i] != arr[j])
+        {
+            isPalindrome = false; // Found a mismatch
+            break;
+        }
+    }
+
+    // Output the result
+    if (isPalindrome)
+    {
+        cout << "The array is in palindrome order." << endl;
+    }
+    else
+    {
+        cout << "The array is not in palindrome order." << endl;
+    }
+
+    return 0;
+}
