@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[7]; // Array to store 7 integers
+
+    // Input 7 integers from the user
+    cout << "Enter 7 integers:" << endl;
+    for (int i = 0; i < 7; i++)
+    {
+        cin >> arr[i];
+    }
+
+    // Reverse the order of the array
+    for (int i = 0, j = 6; i < j; i++, j--)
+    {
+        // Swap arr[i] and arr[j]
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    // Output the reversed array
+    cout << "Reversed array:" << endl;
+    for (int i = 0; i < 7; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
